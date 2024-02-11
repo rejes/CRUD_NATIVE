@@ -36,4 +36,29 @@ function hapus($id) {
 
     return mysqli_affected_rows($conn);
 }
+    function update($data){
+        global $conn;
+
+        $id         = $data["id"];
+        $nis        = htmlspecialchars($data["nis"]);
+        $nama       = htmlspecialchars($data["nama"]);
+        $email      = htmlspecialchars($data["email"]);
+        $jurusan    = htmlspecialchars($data["jurusan"]);
+        $gambar     = htmlspecialchars($data["gambar"]);
+
+    // query insert data
+    $query = " UPDATE siswa SET
+                nama    = '$nama',
+                nis     = '$nis',
+                email   = '$email',
+                jurusan = '$jurusan',
+                gambar  = '$gambar'
+            WHERE id    = $id
+                ";
+
+mysqli_query($conn, $query);
+return mysqli_affected_rows($conn);
+    }
 ?>
+
+

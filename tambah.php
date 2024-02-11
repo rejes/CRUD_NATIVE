@@ -4,17 +4,19 @@
     if ( isset($_POST["submit"])) {
         // check apakah data berhasil di tambahkan atau tidak
         if (tambah($_POST) > 0) {
-            echo " 
-                <script>
-                    alert('data BERHASIL');
+            echo "
+                <script> 
+                    alert('data Berhasil!!!');
                     document.location.href = 'index.php';
-                </script> ";
+                </script>
+            ";
         }else {
-            echo " 
-                <script>
-                    alert('data GAGAL');
+            echo "
+                <script> 
+                    alert('data GAGAL!!!');
                     document.location.href = 'index.php';
-                </script> ";
+                </script>
+            ";
         }
     }
 ?>

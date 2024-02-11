@@ -24,7 +24,7 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa");
     <?php foreach ( $siswa as $row) : ?>
     <tr>
         <td> <?= $i; ?> </td> <td>
-            <a href="ubah.php">ubah</a>
+            <a href="update.php?id=<?=  $row["id"] ?>">Update</a>
             <a href="hapus.php?id=<?= $row["id"]; ?>">hapus</a>
         </td>
         <td><img src="img/<?= $row["gambar"]; ?>" width="50"> </td>
