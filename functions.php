@@ -1,6 +1,6 @@
 <?php
 //koneksi database
-$conn = mysqli_connect("localhost", "root", "", "belajardata" );
+$conn = mysqli_connect("localhost", "root", "", "siswa" );
 function query($query) {
     global $conn;
     $result = mysqli_query($conn, $query) ;
@@ -23,7 +23,7 @@ function query($query) {
         $jurusan    = htmlspecialchars($data["jurusan"]);
         $gambar     = htmlspecialchars($data["gambar"]);
     // query insert data
-    $query = "INSERT INTO siswa
+    $query = "INSERT INTO siswaiqis
                 VALUES
                 ('','$nis', '$nama', '$email', '$jurusan', '$gambar')";
     mysqli_query($conn, $query);
