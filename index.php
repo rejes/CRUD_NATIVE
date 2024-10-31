@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-$siswa = mysqli_query($conn, "SELECT * FROM siswa");
+$siswa = mysqli_query($conn, "SELECT * FROM siswaiqis");
 ?>
 <!DOCTYPE html>
 <html lang="en">
